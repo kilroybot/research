@@ -1,3 +1,3 @@
-# kilroysearch
+# research
 
 kilroy research 🔬
