@@ -35,7 +35,7 @@ jupyter-server==1.13.0
 jupyterlab==3.2.4
 jupyterlab-pygments==0.1.2
 jupyterlab-server==2.8.2
-kilroyplot==0.2.0
+kilroyplot==0.2.1
 kiwisolver==1.3.2
 MarkupSafe==2.0.1
 matplotlib==3.5.0
