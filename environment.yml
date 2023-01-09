@@ -1,9 +1,7 @@
 name: kilroy-research
 channels:
-  - default
+  - defaults
   - conda-forge
 dependencies:
-  - python==3.9.7
-  - pip==21.2.4
-  - pip:
-      - -r requirements.txt
+  - python==3.10.6
+  - pip==22.2.2

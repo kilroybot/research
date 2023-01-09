@@ -1,0 +1,61 @@
+[tool.poetry]
+name = "research"
+version = "0.1.0"
+description = "kilroy research 🔬"
+readme = "README.md"
+authors = ["kilroy <kilroymail@pm.me>"]
+classifiers = ["License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"]
+repository = "https://github.com/kilroybot/research"
+documentation = "https://kilroybot.github.io/research"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jupyterlab = "^3.5"
+matplotlib = "^3.6"
+ipywidgets = "^8.0"
+tqdm = "^4.64"
+kilroyplot = "^0.2"
+torch = "^1.13"
+jax = "^0.4"
+jaxlib = "^0.4"
+numpy = "^1.24"
+einops = "^0.6"
+
+[tool.poetry.group.poe.dependencies]
+poethepoet = "^0.16"
+
+[tool.poetry.group.dev.dependencies]
+black = { version = "^22", extras = ["jupyter"] }
+
+[tool.black]
+line-length = 79
+target-version = ['py310']
+
+[tool.poe]
+verbosity = -1
+
+[tool.poe.tasks.install]
+help = "Install the package for local development in editable mode"
+cmd = "poetry install --sync"
+
+[tool.poe.tasks.update]
+help = "Update the package dependencies"
+cmd = "poetry update"
+
+[tool.poe.tasks.format]
+help = "Format the code"
+cmd = "black ."
+
+[tool.poe.tasks.lint]
+help = "Lint the code"
+cmd = "black . --check --diff"
+
+[tool.poe.tasks.jupyter]
+help = "Run jupyter lab"
+cmd = "jupyter lab --notebook-dir=./notebooks"
+
+[build-system]
+# this should be there, see https://python-poetry.org/docs/pyproject/#poetry-and-pep-517
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
