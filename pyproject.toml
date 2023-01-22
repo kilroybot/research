@@ -10,7 +10,7 @@ repository = "https://github.com/kilroybot/research"
 documentation = "https://kilroybot.github.io/research"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = ">=3.10,<3.12"
 jupyterlab = "^3.5"
 matplotlib = "^3.6"
 ipywidgets = "^8.0"
@@ -20,6 +20,7 @@ torch = "^1.13"
 jax = "^0.4"
 jaxlib = "^0.4"
 numpy = "^1.24"
+scipy = "^1.10"
 einops = "^0.6"
 
 [tool.poetry.group.poe.dependencies]
